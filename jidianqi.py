@@ -18,25 +18,18 @@ GPIO.output(makerobo_RelayPin2, GPIO.LOW)  # 关闭继电器
 # 循环函数
 def makerobo_loop():
     click = 0;  # 俺当做节拍器来用
-    while True:
-        # 继电器打开
-        kaiguan = int(input('kai0guan1：'))
-        if kaiguan == 0:
-            GPIO.output(makerobo_RelayPin, GPIO.HIGH)
-            GPIO.output(makerobo_RelayPin2, GPIO.HIGH)
-            time.sleep(0.5)  # 延时500ms
+    GPIO.output(makerobo_RelayPin, GPIO.HIGH)
+    GPIO.output(makerobo_RelayPin2, GPIO.HIGH)
+    time.sleep(0.5)  # 延时500ms
         # 继电器关闭
-        else:
-            GPIO.output(makerobo_RelayPin, GPIO.LOW)
-            GPIO.output(makerobo_RelayPin2, GPIO.LOW)
-            time.sleep(0.5)  # 延时500ms
+
 
 
 # 释放资源
 def makerobo_destroy():
     GPIO.output(makerobo_RelayPin, GPIO.LOW)  # 关闭继电器
     GPIO.output(makerobo_RelayPin2, GPIO.LOW)
-    GPIO.cleanup()  # 释放资源
+    #GPIO.cleanup()  # 释放资源
 
 
 # # 程序入口

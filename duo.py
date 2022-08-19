@@ -12,7 +12,8 @@ TRIG = 17  # send-pin
 ECHO = 18  # receive-pin
 servo_pin = 14
 servo_pin2 = 8
-
+makerobo_RelayPin = 4
+makerobo_RelayPin2 = 26
 led2 = LED(5)
 led3 = LED(6)
 DHTPIN = 27
@@ -24,8 +25,12 @@ STATE_DATA_FIRST_PULL_DOWN = 3
 STATE_DATA_PULL_UP = 4
 STATE_DATA_PULL_DOWN = 5
 GPIO.setwarnings(False)
-
 GPIO.setmode(GPIO.BCM)
+GPIO.setup(makerobo_RelayPin, GPIO.OUT)  # 设置Pin模式为输出模式
+GPIO.output(makerobo_RelayPin, GPIO.LOW)  # 关闭继电器
+GPIO.setup(makerobo_RelayPin2, GPIO.OUT)  # 设置Pin模式为输出模式
+GPIO.output(makerobo_RelayPin2, GPIO.LOW)  # 关闭继电器
+
 GPIO.setup(TRIG, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(ECHO, GPIO.IN)
 GPIO.setup(servo_pin, GPIO.OUT, initial=False)
