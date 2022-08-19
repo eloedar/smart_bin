@@ -154,8 +154,7 @@ def loop():
         if dis < 5:
             led2.off()
             led3.off()
-            feng()
-            jie()
+            change_bag()
         if 10 > dis > 5:
             led3.on()
             led2.off()
@@ -167,10 +166,10 @@ def loop():
 
 
 def change_bag():
-    # jd.makerobo_loop()
+    jd.makerobo_loop()
     feng()
     jie()
-    # jd.makerobo_destroy()
+    jd.makerobo_destroy()
 
 
 def feng():
