@@ -1,0 +1,94 @@
+<body background="https://www.todaybing.com/api/today/cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮框美化</title>
+
+    <style>
+        .login-button { /* 按钮美化 */
+            width: 270px; /* 宽度 */
+            height: 40px; /* 高度 */
+            border-width: 0px; /* 边框宽度 */
+            border-radius: 3px; /* 边框半径 */
+            background: #1E90FF; /* 背景颜色 */
+            cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+            outline: none; /* 不显示轮廓线 */
+            font-family: Microsoft YaHei; /* 设置字体 */
+            color: white; /* 字体颜色 */
+            font-size: 17px; /* 字体大小 */
+        }
+
+        .login-button:hover { /* 鼠标移入按钮范围时改变颜色 */
+            background: #5599FF;
+        }  </style>
+
+
+        <style>
+        .btn {
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            border: none;
+            background-color: green;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: blue;
+        }
+
+        .btn-success {
+            background-color: green;
+        }
+
+        .btn-warning {
+            background-color: yellow;
+        }
+
+        .btn-danger {
+            background-color: red;
+        }
+    </style>
+    <style>
+        .capital {
+            text-align: center;
+            line-height: 30px;
+            font-size: 40px;
+        }
+    </style>
+    <style>
+        .word {
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<div class="capital">
+    <p>智能垃圾桶管理页面</p>
+</div>
+<div class="word">
+    <p>温度:{{temp}} 湿度:{{humidity}} 垃圾高度：{{height}}</p>
+</div>
+<div class="capital">
+    <p>垃圾袋控制</p>
+</div>
+
+<form action="/control/" method="POST" class="login-button">
+    <input type="submit" value="垃圾袋控制"/><br/>
+</form>
+
+<form action="/img/" method="POST" class="login-button">
+    <input type="submit" value="查看实时图像"/><br/>
+</form>

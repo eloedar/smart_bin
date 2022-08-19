@@ -1,0 +1,41 @@
+<style>
+    .capital {
+        text-align: center;
+        line-height: 30px;
+        font-size: 40px;
+    }
+</style>
+<style>
+    .word {
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+    }
+</style>
+<div class="capital">
+    <p>垃圾袋控制</p>
+</div>
+
+
+<div class="word">
+    <p>{{forward_message}}</p>
+</div>
+
+
+<form action="/close_top/" method="post" class="word">
+    <button name="closeBtn" type="submit">关盖子</button>
+</form>
+
+<form action="/open_top/" method="post" class="word">
+    <button name="openBtn" type="submit">开盖子</button>
+</form>
+
+<form action="/change_bag/" method="post" class="word">
+    <button name="changeBtn" type="submit">换袋子</button>
+</form>
+
+<form action="/input/" method="POST" class="word">
+    新增Server酱推送地址：<input type="text" name="address"><br/>
+    <input type="submit" value="提交"><br/>
+    {{msg}}
+</form>
