@@ -14,8 +14,8 @@ servo_pin = 14
 servo_pin2 = 8
 makerobo_RelayPin = 4
 makerobo_RelayPin2 = 26
-led2 = LED(5)
-led3 = LED(6)
+led2 = LED(6)
+led3 = LED(5)
 DHTPIN = 27
 MAX_UNCHANGE_COUNT = 100
 
@@ -158,7 +158,7 @@ def loop():
         print('')
         if dis < 5:
             led2.off()
-            led3.off()
+            led3.on()
             change_bag()
         if 10 > dis > 5:
             led3.on()

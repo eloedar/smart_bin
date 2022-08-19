@@ -19,7 +19,7 @@ def angleToDutyCycle(angle):
 
 
 def open_top():
-    p.start(angleToDutyCycle(110))  # 舵机初始化角度为90
+    p.start(angleToDutyCycle(100))  # 舵机初始化角度为90
     sleep(3)
     p.ChangeDutyCycle(0)
 
