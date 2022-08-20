@@ -41,6 +41,8 @@ def index():
             if msg.content == "换袋":
                 change_bag()
                 reply = create_reply('收到，操作已发送', msg)
+            if msg.content == "高级操作":
+                reply = create_reply('请与智能垃圾桶连接同一WiFi网络后，访问http://smartbin.local:4000 来进行高级操作。', msg)
     return reply.render()
 
 

@@ -171,8 +171,10 @@ def loop():
 
 
 def change_bag():
-    jd.makerobo_loop()
+
     feng()
+    jd.makerobo_loop()
+    sleep((5))
     jie()
     jd.makerobo_destroy()
 

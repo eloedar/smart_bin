@@ -1,6 +1,4 @@
 import re
-
-from duo import distance
 import duo
 import cv2
 import eventlet
@@ -89,7 +87,6 @@ def change_bag():
                                height=str(30), forward_message=forward_message)
 
 
-
 @app.route("/input/", methods=['GET', 'POST'])
 def add_post_address():
     local_address = request.form.get('address')
@@ -113,16 +110,6 @@ def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
-@app.route('/release/', methods=['POST'])
-def img_release():
-    if result:
-        return render_template('index.html', temp=str(temperature) + str(u'\u2103'), humidity=str(humidity_l) + '%',
-                               height=str(30))
-    else:
-        return render_template('index.html', temp=str("传感器故障"), humidity=str("传感器故障"),
-                               height=str(30))
-
-
 def gen_frames():
     camera = cv2.VideoCapture(0)
     while True:
@@ -137,5 +124,4 @@ def gen_frames():
 
 
 if __name__ == '__main__':
-
     app.run(host='0.0.0.0', port=4000, debug=True)

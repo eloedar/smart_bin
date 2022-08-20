@@ -1,26 +1,133 @@
-<style>
-    .capital {
-        text-align: center;
-        line-height: 30px;
-        font-size: 40px;
-    }
-</style>
-<style>
-    .word {
-        text-align: center;
-        line-height: 30px;
-        font-size: 20px;
-    }
-</style>
+<body background="https://www.todaybing.com/api/today/cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮框美化</title>
+
+    <style>
+        .login-button { /* 按钮美化 */
+            width: 270px; /* 宽度 */
+            height: 40px; /* 高度 */
+            border-width: 0px; /* 边框宽度 */
+            border-radius: 3px; /* 边框半径 */
+            background: #1E90FF; /* 背景颜色 */
+            cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+            outline: none; /* 不显示轮廓线 */
+            font-family: Microsoft YaHei; /* 设置字体 */
+            color: white; /* 字体颜色 */
+            font-size: 17px; /* 字体大小 */
+        }
+
+        div {
+            width: 100%;
+            border: 1px solid red;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .login-button:hover { /* 鼠标移入按钮范围时改变颜色 */
+            background: #5599FF;
+        }  </style>
+
+
+    <style>
+        .btn {
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            border: none;
+            background-color: green;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: blue;
+        }
+
+        .btn-success {
+            background-color: green;
+        }
+
+        .btn-warning {
+            background-color: yellow;
+        }
+
+        .btn-danger {
+            background-color: red;
+        }
+    </style>
+    <style>
+        .capital {
+            text-align: center;
+            line-height: 30px;
+            font-size: 40px;
+            background: grey;
+            padding: 2px;
+            color: #fff;
+        }
+    </style>
+    <style>
+        .word {
+            background: grey;
+            padding: 2px;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+        }
+    </style>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fa {
+            text-align: center;
+            height: 100%;
+        }
+
+        .fa:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .centered {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            border: none;
+            background-color: green;
+            line-height: 50px;
+            font-size: 30px;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .centered:focus {
+            outline: none;
+        }
+    </style>
+
+</head>
+</body>
 <div class="capital">
     <p>垃圾袋控制</p>
 </div>
-
-
-<div class="word">
-    <p>{{forward_message}}</p>
-</div>
-
 
 <form action="/close_top/" method="post" class="word">
     <button name="closeBtn" type="submit">关盖子</button>

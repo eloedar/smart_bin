@@ -19,12 +19,20 @@
             font-size: 17px; /* 字体大小 */
         }
 
+        div {
+            width: 100%;
+            border: 1px solid red;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
         .login-button:hover { /* 鼠标移入按钮范围时改变颜色 */
             background: #5599FF;
         }  </style>
 
 
-        <style>
+    <style>
         .btn {
             text-align: center;
             width: 150px;
@@ -63,17 +71,60 @@
             text-align: center;
             line-height: 30px;
             font-size: 40px;
+            background: grey;
+            padding: 2px;
+            color: #fff;
         }
     </style>
     <style>
         .word {
+            background: grey;
+            padding: 2px;
+            color: #fff;
             text-align: center;
             line-height: 30px;
             font-size: 20px;
         }
     </style>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fa {
+            text-align: center;
+            height: 100%;
+        }
+
+        .fa:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .centered {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            border: none;
+            background-color: green;
+            line-height: 50px;
+            font-size: 30px;
+            color: white;
+            border-radius: 50px;
+        }
+        .centered:focus {
+            outline: none;
+        }
+    </style>
 
 </head>
+
+<body>
 
 <div class="capital">
     <p>智能垃圾桶管理页面</p>
@@ -81,14 +132,13 @@
 <div class="word">
     <p>温度:{{temp}} 湿度:{{humidity}} 垃圾高度：{{height}}</p>
 </div>
-<div class="capital">
-    <p>垃圾袋控制</p>
+<div class="fa">
+    <form action="/control/" method="POST" class="centered">
+        <input type="submit" value="垃圾袋控制"/><br/>
+    </form>
+
+    <form action="/img/" method="POST" class="centered">
+        <input type="submit" value="查看实时图像"/><br/>
+    </form>
 </div>
-
-<form action="/control/" method="POST" class="login-button">
-    <input type="submit" value="垃圾袋控制"/><br/>
-</form>
-
-<form action="/img/" method="POST" class="login-button">
-    <input type="submit" value="查看实时图像"/><br/>
-</form>
+</body>
